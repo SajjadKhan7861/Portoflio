@@ -1,0 +1,805 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  perspective: 800px;
+  overflow: hidden;
+}
+body * {
+  transform-style: preserve-3d;
+}
+
+.scene {
+  position: relative;
+  transform: rotateX(-30deg) rotateY(-60deg);
+  font-size: 60px;
+  animation: sceneRotate 60s infinite linear;
+}
+@keyframes sceneRotate {
+  from {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+.column {
+  position: absolute;
+  transform: rotateY(var(--ry)) translateX(2.8em);
+}
+.column:nth-child(1) {
+  --ry: 0deg;
+}
+.column:nth-child(1) .box {
+  animation: boxRotate0 12s var(--delay) infinite ease-in-out, boxTop0 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column:nth-child(2) {
+  --ry: 30deg;
+}
+.column:nth-child(2) .box {
+  animation: boxRotate1 12s var(--delay) infinite ease-in-out, boxTop1 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column:nth-child(3) {
+  --ry: 60deg;
+}
+.column:nth-child(3) .box {
+  animation: boxRotate2 12s var(--delay) infinite ease-in-out, boxTop2 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column:nth-child(4) {
+  --ry: 90deg;
+}
+.column:nth-child(4) .box {
+  animation: boxRotate3 12s var(--delay) infinite ease-in-out, boxTop3 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column:nth-child(5) {
+  --ry: 120deg;
+}
+.column:nth-child(5) .box {
+  animation: boxRotate4 12s var(--delay) infinite ease-in-out, boxTop4 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column:nth-child(6) {
+  --ry: 150deg;
+}
+.column:nth-child(6) .box {
+  animation: boxRotate5 12s var(--delay) infinite ease-in-out, boxTop5 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column:nth-child(7) {
+  --ry: 180deg;
+}
+.column:nth-child(7) .box {
+  animation: boxRotate6 12s var(--delay) infinite ease-in-out, boxTop6 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column:nth-child(8) {
+  --ry: 210deg;
+}
+.column:nth-child(8) .box {
+  animation: boxRotate7 12s var(--delay) infinite ease-in-out, boxTop7 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column:nth-child(9) {
+  --ry: 240deg;
+}
+.column:nth-child(9) .box {
+  animation: boxRotate8 12s var(--delay) infinite ease-in-out, boxTop8 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column:nth-child(10) {
+  --ry: 270deg;
+}
+.column:nth-child(10) .box {
+  animation: boxRotate9 12s var(--delay) infinite ease-in-out, boxTop9 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column:nth-child(11) {
+  --ry: 300deg;
+}
+.column:nth-child(11) .box {
+  animation: boxRotate10 12s var(--delay) infinite ease-in-out, boxTop10 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column:nth-child(12) {
+  --ry: 330deg;
+}
+.column:nth-child(12) .box {
+  animation: boxRotate11 12s var(--delay) infinite ease-in-out, boxTop11 12s var(--delay) infinite step-end, boxTranslate 12s var(--delay) infinite linear;
+}
+.column .box {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  transform-origin: top left;
+}
+.column .box:nth-child(1) {
+  --delay: 0s;
+}
+.column .box:nth-child(2) {
+  --delay: -2s;
+}
+.column .box:nth-child(3) {
+  --delay: -4s;
+}
+.column .box:nth-child(4) {
+  --delay: -6s;
+}
+.column .box:nth-child(5) {
+  --delay: -8s;
+}
+.column .box:nth-child(6) {
+  --delay: -10s;
+}
+@keyframes boxTranslate {
+  from {
+    translate: 0 1em;
+  }
+  to {
+    translate: 0 7em;
+  }
+}
+.column .box i {
+  --gap: 0.05em;
+  position: absolute;
+  inset: var(--gap);
+  background-color: rgba(0, 0, 0, 0.8666666667);
+  border: 2px dodgerblue solid;
+  box-shadow: 0 0 0.5em red inset;
+}
+.column .box i:nth-child(1) {
+  transform: translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(4) {
+  transform: rotateY(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(5) {
+  transform: rotateX(270deg) translateZ(calc(0.5em - var(--gap)));
+}
+.column .box i:nth-child(6) {
+  transform: rotateX(90deg) translateZ(calc(0.5em - var(--gap)));
+}/*# sourceMappingURL=img.css.map */
